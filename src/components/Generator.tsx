@@ -44,7 +44,7 @@ const Generator = () => {
       setLoading(true);
       setOutputText("");
 
-      const res = await fetch("http://localhost:5000/generate-description", {
+      const res = await fetch("https://smart-describe-backend.vercel.app/generate-description", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
