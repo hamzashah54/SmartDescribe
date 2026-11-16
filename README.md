@@ -1,73 +1,169 @@
-# Welcome to your Lovable project
+# 🚀 SmartDescribe – AI-Powered YouTube Description Generator
 
-## Project info
+## 📖 Description
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+SmartDescribe is an AI-powered web application designed to generate engaging, informative, and SEO-friendly YouTube video descriptions using Google Gemini AI.
 
-## How can I edit this code?
+Users can simply enter their video title and Call-to-Action (CTA) text, choose whether to include hashtags and emojis, and generate a professional YouTube description within seconds.
 
-There are several ways of editing your application.
+The application features a modern and responsive interface built with React and Tailwind CSS, while the Flask backend handles AI-powered description generation through the Google Gemini API.
 
-**Use Lovable**
+## ✨ Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+🤖 **AI-Powered Description Generation** using Google Gemini AI
 
-Changes made via Lovable will be committed automatically to this repo.
+📝 **Custom Video Titles** – Generate descriptions based on your YouTube video title.
 
-**Use your preferred IDE**
+🔗 **Custom CTA Integration** – Add your own Call-to-Action text at the end of the generated description.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+#️⃣ **Hashtag Control** – Choose whether to include relevant hashtags in your description.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+😀 **Emoji Control** – Enable or disable emojis according to your preference.
 
-Follow these steps:
+📋 **Copy to Clipboard** – Easily copy the generated description with one click.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+⚡ **Fast AI Processing** – Generate engaging descriptions within seconds.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+📱 **Responsive UI** – Modern and responsive layout using Tailwind CSS.
 
-# Step 3: Install the necessary dependencies.
-npm i
+🔔 **Form Validation & Notifications** – Validates required fields and displays success or error notifications.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+🧩 **Reusable Components** – Clean and maintainable component-based architecture.
+
+## 🧰 Tech Stack
+
+| Category | Technologies |
+|---|---|
+| Frontend | React, TypeScript |
+| Build Tool | Vite |
+| Styling | Tailwind CSS |
+| UI Components | shadcn/ui, Radix UI |
+| Icons | Lucide React |
+| Backend | Python, Flask |
+| AI Integration | Google Gemini API |
+| Notifications | Sonner, React Toast |
+| Code Quality | ESLint |
+
+## ⚙️ How to Run
+
+To run the SmartDescribe application locally, follow these steps:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/hamzashah54/SmartDescribe.git
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
+cd SmartDescribe
+```
+
+### 3. Install Frontend Dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the Frontend Development Server
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The frontend development server will start at:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```text
+http://localhost:8080
+```
 
-**Use GitHub Codespaces**
+### 5. Run the Backend
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Open a separate terminal and navigate to the backend directory:
 
-## What technologies are used for this project?
+```bash
+cd backend
+```
 
-This project is built with:
+Create and activate a Python virtual environment:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+python -m venv venv
+```
 
-## How can I deploy this project?
+**Windows:**
+```bash
+venv\Scripts\activate
+```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+**macOS / Linux:**
+```bash
+source venv/bin/activate
+```
 
-## Can I connect a custom domain to my Lovable project?
+Install the required backend dependencies:
 
-Yes, you can!
+```bash
+pip install flask flask-cors python-dotenv google-genai gunicorn
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Create a `.env` file inside the backend directory and add your Google Gemini API key:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```env
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+Start the Flask backend:
+
+```bash
+python app.py
+```
+
+The backend will run at:
+
+```text
+http://localhost:5000
+```
+
+**Note:** The frontend currently uses the deployed backend API URL. To connect your local frontend to the local backend, update the API URL in `src/components/Generator.tsx` to `http://localhost:5000/generate-description`.
+
+## 🏗️ Build
+
+To build the frontend application for production, run:
+
+```bash
+npm run build
+```
+
+The production-ready build will be generated inside the `dist` directory.
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+To check code quality using ESLint:
+
+```bash
+npm run lint
+```
+
+## 🌐 Live Demo
+
+Experience the live application:
+
+[https://smart-describe.vercel.app/](https://smart-describe.vercel.app/)
+
+## 👤 Author
+
+SmartDescribe was collaboratively developed by:
+
+Hamza Shah
+
+Syed Arham Ali
+
+Syeda Aqsa
+
+Waiz Hussain Siddiqui
